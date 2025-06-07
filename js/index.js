@@ -14,7 +14,7 @@ function avanzar() {
 
       // Esperar 3 segundos y luego redirigir
       setTimeout(() => {
-        window.location.href = "../../html/index.html"; // Revisa esta ruta también
+        window.location.href = "/MiniJuego/html/index.html"; // Revisa esta ruta también
       }, 5000);
 
       return;
