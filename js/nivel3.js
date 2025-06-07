@@ -97,7 +97,7 @@ function mover(dx, dy) {
                 if (segundos === 0) {
                     clearInterval(intervalo);
                     // Redirigir a la página con el mensaje
-                    window.location.href = "../../html/mensajeFinal.html";  // <-- Cambia por la ruta correcta si quieres
+                    window.location.href = "mensajeFinal.html";  // <-- Cambia por la ruta correcta si quieres
                 }
             }, 1000);
         }

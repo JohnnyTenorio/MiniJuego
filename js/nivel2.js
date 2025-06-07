@@ -129,7 +129,7 @@ function juegoCompletado() {
   btnSiguiente.textContent = "Ir al Nivel 3";
   // Cambiamos el evento para redirigir al nivel 3
   btnSiguiente.onclick = () => {
-    window.location.href = '../nivel3/nivel3.html'; // Ajusta esta ruta según tu estructura
+    window.location.href = 'nivel3.html'; // Ajusta esta ruta según tu estructura
   };
 }
 
