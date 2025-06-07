@@ -15,6 +15,7 @@
       <h1>🌟 Comienza la Aventura esto son los niveles que tendras que pasar 🌟</h1>
       <p id="mensaje">Nivel 1 - Subnivel 1</p>
       <button onclick="avanzar()">Continuar</button>
+        <button onclick="html/index.html">Continuar</button>
     </div>
 
     <div id="final" class="oculto">
@@ -27,28 +28,6 @@
     </div>
   </div>
   <script src="js/index.js"></script>
-
-
-  <audio id="musicaFondo" src="../img/INICIO.mp3" autoplay loop></audio>
-
-<script>
-  // Referencia al audio
-  const musica = document.getElementById('musicaFondo');
-
-  // Intenta reproducir al cargar
-  window.addEventListener('load', () => {
-    const playPromise = musica.play();
-
-    // Si el navegador bloquea, espera interacción
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        document.body.addEventListener('click', () => {
-          musica.play();
-        }, { once: true });
-      });
-    }
-  });
-</script>
 
 </body>
 
