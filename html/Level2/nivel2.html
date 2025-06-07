@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nivel 2 - Juego de la Serpiente</title>
+    <link rel="stylesheet" href="../../css/nivel2/nivel2.css" />
+    <link rel="shortcut icon" href="../../img/favicoin.png" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Nivel 2: Juego de la Serpiente - Indirectas intermedias</h1>
+
+    <div id="mensaje">Come la comida para descubrir una indirecta...</div>
+    <button id="btnSiguiente" style="display:none;">Siguiente</button>
+    <div id="preparacion" style="display: none; font-size: 1.2rem; margin-top: 10px; color: yellow;"></div>
+
+    <canvas id="snake" width="300" height="300"></canvas>
+
+    <div id="controles-movil">
+        <button id="up">↑</button><br />
+        <button id="left">←</button>
+        <button id="down">↓</button>
+        <button id="right">→</button>
+    </div>
+
+    <div id="final" class="oculto">
+        <h2>¡Nivel completado!</h2>
+        <p>¿Listo para algo más directo?</p>
+    </div>
+
+    <script src="../../js/nivel2/nivel2.js"></script>
+    <audio id="musicaFondo" src="../../img/NIVEL2.mp3" autoplay loop></audio>
+    
+    <script>
+        // Referencia al audio
+        const musica = document.getElementById('musicaFondo');
+
+        // Intenta reproducir al cargar
+        window.addEventListener('load', () => {
+            const playPromise = musica.play();
+
+            // Si el navegador bloquea, espera interacción
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    document.body.addEventListener('click', () => {
+                        musica.play();
+                    }, { once: true });
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

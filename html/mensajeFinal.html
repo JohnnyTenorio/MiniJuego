@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mensaje Especial</title>
+  <link rel="stylesheet" href="../css/MensajeFinal.css" />
+  <link rel="shortcut icon" href="../img/favicoin.png" type="image/x-icon">
+</head>
+<body>
+  <main class="carta">
+    <h1>Para Ana Belén</h1>
+    <p>
+Hola Ana Belén,
+
+Soy el creador de este mini juego jssj y espero que te haya gustado. Sabes, no soy muy creativo en la vida real ni con palabras en WhatsApp o en redes sociales, pero sí soy creativo en programación. Y esta es la primera vez que una mujer me motiva a hacer algo así.
+
+No importa si es solo para plan amigo o para algo más, no sé si entendiste todas mis frases, pero seré más directo aquí porque no busco nada ni quiero terminar nada contigo. Espero que este mini juego sea un secreto solo entre tú y yo, no me gusta exponerme en estos casos con personas o en redes sociales.
+
+Si deseas, puedes contarle a algún miembro de tu familia, aunque sé que tienen ciertas restricciones contigo y dudo que quieran involucrarse. Pero bueno, sabes que me gustas; no de manera intensa ni exagerada, pero sí me gustas. Sé que para ti misma no eres la mejor chica que alguien como yo pueda tener, o que alguien como yo pueda tener a una gran chica como tú. Todos somos grandes según nuestra conciencia.
+
+No haré esto más largo porque sé que odias el testamento, pero trato de ser expresivo jaja. Este “me gustas” es normal, no busco ser tu novio ahora porque me dijiste que yo no soy para ti o que no te convengo, algo recuerdo. Pero como te digo, solo quisiera conocerte y ver si en el futuro quieres algo más que una gran amistad.
+
+Si quieres pensarlo, hazlo, no tengo problema. Y si dices que no, que solo me ves como un amigo o que no soy tu tipo o que no crees que sea bueno para ti, no lo tomaré mal. Solo seguiré siendo tu amigo o el mejor amigo, como tú quieras verme.
+
+Sé que me dijiste que eres fría en una relación, pero conmigo no habrá ese problema porque si me acostumbro a mi pareja, seré el doble de frío que tú. Porque para mí, mientras tenga a una chica que yo sienta algo, me da igual el físico o los pensamientos, lo que importa son los sentimientos.
+
+Si dices que me quieres en el futuro, porque sé que ahora no quieres a nadie y te gusta tu soltería, me gusta que estés así, más alegre. Y si después dices que me amas o algo, eso me importaría mucho más que cualquier cursilería que a mí no me gusta, pero con tal de ver feliz a mi pareja, lo haría.
+
+Si no te gusta eso, bueno, a mí tampoco me gusta mucho, y sé que no tienes dinero; yo tampoco soy rico, y si toca dar 50 y 50, lo haremos con lo que tengamos. No me importa el físico ni nada, solo tus sentimientos. Para mí sería lo mejor.
+
+Siento un poco de rabia porque eres una chica excelente, hasta donde te conozco claro. Eres enojona cuando te lo buscan, etc., pero como persona me caes muy bien. Desde el primer ciclo me caíste bien.
+
+Entonces eso, Ana Belén, solo busco eso. Si me dices que sí para conocernos, tendremos muchos años para hacerlo, y si en un mes lo logro, mucho mejor jaja.
+
+Igual pregúntame todo de mí, etc., y retrocediendo a lo de la rabia, es que solo un chico en tu vida fue el que vio ese corazón que tienes a tu manera. Y ahora estás restringida a tener personas en tu vida, qué pena en el sentido que el no valoró lo que hiciste, aunque estaban un poco a escondida todo normal, esconderle casi un poco a tus padres por él o algunas mentiras piadosas igual no lo tomes a mal yap, aunque después lo descubrieron. Igual quedan los lindos recuerdos y eso es lo importante.
+
+Le deseo lo mejor a él en todos sus caminos, es una gran persona, pero ciertas cosas hacen que nos vean a los hombres así. Pero fuera de eso, excelente persona.
+
+Ahora, eso no quiero ser tu novio ni nada, solo quiero ser tu amigo, como hasta ahora. Llevo dos días haciendo esto, jaja, espero que lo valores y te guste.
+
+Y como te digo, solo deseo conocerte o mejor dicho que tú me conozcas a mí, si quieres, preguntándome lo que sea para ver si te conviene o no. De mi parte no tengo más que ofrecer, porque ya casi me dijiste todo sobre ti, pero de mí casi no sabes mucho. Y si quieres saber cómo soy, incluso hasta qué punto soy yo, pues eso queda en ti, jaja, con un sí o con un no.
+
+Como te digo, no importa si dices no, solo lo estoy intentando, jaja. Por lo menos es la primera vez que le digo a una persona “¿quieres conocerme y ver qué pasa en la vida?”.
+
+No pido ser tu novio, solo una fase para conocernos, jaja, y eso, jaja. Y si dices que sí, igual seguiré siendo como soy, tu amigo, etc. Jugaremos, y si dices no, igual seguiré normal como siempre. Solo lo quiero intentar de manera creativa, a mi manera, en programación, jaja.
+
+Espero que te guste y que tengas un buen día, tarde y noche, jaja.
+    </p>
+    <footer class="firma">
+      <p>Con creatividad y con cariño,</p>
+      <p>❤️ Tu amigo el programador 2.0</p>
+      <div id="volverMenu" style="display:none; text-align:center; margin-top: 30px;">
+  <button id="btnVolver" onclick="window.location.href='../index.html'">Volver al Menú Principal</button>
+</div>
+
+<div id="contador" style="text-align:center; margin-top: 20px; font-size: 1.2em; color: #555;">
+    Quedan 30 segundos para que aparezca el botón y regreses al menú principal
+</div>
+
+<script>
+    let tiempoRestante = 30; // 30 segundos
+
+    const contadorElem = document.getElementById('contador');
+    const volverMenu = document.getElementById('volverMenu');
+
+    const intervalo = setInterval(() => {
+        tiempoRestante--;
+        if (tiempoRestante > 0) {
+            contadorElem.textContent = `Quedan ${tiempoRestante} segundos para que aparezca el botón y regreses al menú principal`;
+        } else {
+            clearInterval(intervalo);
+            contadorElem.textContent = '¡Ya puedes regresar al menú principal!';
+            volverMenu.style.display = 'block';
+        }
+    }, 1000);
+</script>
+
+    </footer>
+  </main>
+
+      <audio id="musicaFondo" src="../../img/FINAL.mp3" autoplay loop></audio>
+      
+      <script>
+        // Referencia al audio
+        const musica = document.getElementById('musicaFondo');
+  musica.volume = 0.2; // 🔉 Ajusta el volumen aquí (0.0 a 1.0)
+
+        // Intenta reproducir al cargar
+        window.addEventListener('load', () => {
+          const playPromise = musica.play();
+
+          // Si el navegador bloquea, espera interacción
+          if (playPromise !== undefined) {
+            playPromise.catch(() => {
+              document.body.addEventListener('click', () => {
+                musica.play();
+              }, { once: true });
+            });
+          }
+        });
+      </script>
+</body>
+</html>

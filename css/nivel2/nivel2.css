@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  font-size: 2rem;
+  text-shadow: 1px 1px 3px #000;
+}
+
+#mensaje {
+  font-size: 1.2rem;
+  margin: 10px auto 20px auto;
+  padding: 10px 15px;
+  max-width: 600px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  font-style: italic;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#preparacion {
+  font-size: 1.1rem;
+  margin: 10px auto 20px auto;
+  padding: 10px 15px;
+  max-width: 600px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  color: yellow;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+#snake {
+  background: #142850;
+  border: 4px solid #27496d;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#btnSiguiente {
+  display: none;
+  margin: 0 auto 20px auto;
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#btnSiguiente:hover {
+  background-color: #16a085;
+  transform: scale(1.05);
+}
+
+#controles-movil {
+  margin-top: 20px;
+  display: none;
+}
+
+#controles-movil button {
+  font-size: 22px;
+  margin: 8px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #27496d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  transition: background 0.3s, transform 0.2s;
+}
+
+#controles-movil button:hover {
+  background: #336699;
+  transform: scale(1.1);
+}
+
+.oculto {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #controles-movil {
+    display: block;
+  }
+
+  #snake {
+    width: 280px !important;
+    height: 280px !important;
+  }
+
+  #btnSiguiente {
+    width: 80%;
+  }
+
+  #mensaje, #preparacion {
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
+}

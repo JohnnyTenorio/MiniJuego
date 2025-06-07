@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nivel 1 - Conociéndonos</title>
+    <link rel="stylesheet" href="../../css/nivel1/level1.css" />
+    <link rel="shortcut icon" href="../../img/favicoin.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <h1>🌟 Nivel 1 - Conociéndonos 🌟</h1>
+    <p id="mensaje">Subnivel 1: Da el primer paso...</p>
+
+    <div id="juego">
+        <div id="mapa">
+            <div id="personaje"></div>
+            <div id="objeto"></div>
+            <div class="obstaculo" style="top: 100px; left: 100px;"></div>
+            <div class="obstaculo" style="top: 150px; left: 50px;"></div>
+            <div class="obstaculo" style="top: 50px; left: 200px;"></div>
+            <div class="obstaculo" style="top: 200px; left: 150px;"></div>
+            <div class="obstaculo" style="top: 250px; left: 80px;"></div>
+        </div>
+        <div id="controles-movil">
+            <button onclick="mover('ArrowUp')">⬆️</button><br>
+            <button onclick="mover('ArrowLeft')">⬅️</button>
+            <button onclick="mover('ArrowDown')">⬇️</button>
+            <button onclick="mover('ArrowRight')">➡️</button>
+        </div>
+        <button id="siguiente" onclick="siguienteSubnivel()" style="display:none;">Siguiente Subnivel</button>
+    </div>
+
+    <div id="final" class="oculto">
+        <h2>🧩 Final del Nivel 1</h2>
+        <p>Me gustaría conocerte más, pero no quiero correr... Solo compartir momentos, palabras y miradas a distancia. 🌸</p>
+        <button onclick="window.location.href='../Level2/nivel2.html'">Ir al Nivel 2</button>
+    </div>
+
+    <script src="../../js/nivel1/nivel1.js"></script>
+
+    <audio id="musicaFondo" src="../../img/NIVEL1.mp3" autoplay loop></audio>
+
+<script>
+  // Referencia al audio
+  const musica = document.getElementById('musicaFondo');
+
+  // Intenta reproducir al cargar
+  window.addEventListener('load', () => {
+    const playPromise = musica.play();
+
+    // Si el navegador bloquea, espera interacción
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        document.body.addEventListener('click', () => {
+          musica.play();
+        }, { once: true });
+      });
+    }
+  });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+  font-family: 'Georgia', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.carta {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 750px;
+  padding: 30px;
+  margin: 20px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.carta h1 {
+  text-align: center;
+  color: #c0392b;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  margin-bottom: 20px;
+}
+
+.carta p {
+  white-space: pre-wrap;
+  font-size: 1.1rem;
+}
+
+.firma {
+  margin-top: 40px;
+  text-align: right;
+  font-style: italic;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .carta {
+    padding: 20px;
+  }
+
+  .carta p {
+    font-size: 1rem;
+  }
+
+  .carta h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Estilos para el botón y el contador */
+#volverMenu {
+  display: none;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#btnVolver {
+  background: #2980b9;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(41, 128, 185, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  max-width: 90vw;
+  width: 300px;
+}
+
+#btnVolver:hover, #btnVolver:focus {
+  background: #1f5f8b;
+  box-shadow: 0 6px 12px rgba(31, 95, 139, 0.6);
+  outline: none;
+}
+
+#contador {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: break-word;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  #btnVolver {
+    padding: 12px 20px;
+    font-size: 1rem;
+    width: 90vw;
+  }
+  #contador {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}

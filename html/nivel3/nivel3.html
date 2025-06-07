@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nivel 3 - Laberinto del Amor</title>
+  <link rel="stylesheet" href="../../css/nivel3/nivel3.css" />
+  <link rel="shortcut icon" href="../../img/favicoin.png" type="image/x-icon">
+</head>
+<body>
+  <h1>Nivel 3: Escapa del Laberinto (Ya no tan indirectas) <br> Pasar por todos los cuadros amarillo para desbloquear la llaves y despues puedes entrar al verde</h1>
+  <div id="mensaje">¿Lograrás salir? Puede que encuentres pistas... o sentimientos 💌</div>
+  
+  <canvas id="laberinto" width="500" height="500"></canvas>
+
+  <div id="controles-movil">
+    <button id="up">↑</button><br />
+    <button id="left">←</button>
+    <button id="down">↓</button>
+    <button id="right">→</button>
+  </div>
+
+  <div id="final" class="oculto">
+    <h2>¡Escapaste!</h2>
+    <p>Tal vez ahora sí es momento de decirlo directamente... ❤️</p>
+  </div>
+<!-- justo antes del script -->
+<div id="contador" style="font-size: 2rem; text-align:center; margin-top:20px; display:none;"></div>
+
+  <script src="../../js/nivel3/nivel3.js"></script>
+
+      <audio id="musicaFondo" src="../../img/NIVEL3.mp3" autoplay loop></audio>
+      
+      <script>
+        // Referencia al audio
+        const musica = document.getElementById('musicaFondo');
+
+        // Intenta reproducir al cargar
+        window.addEventListener('load', () => {
+          const playPromise = musica.play();
+
+          // Si el navegador bloquea, espera interacción
+          if (playPromise !== undefined) {
+            playPromise.catch(() => {
+              document.body.addEventListener('click', () => {
+                musica.play();
+              }, { once: true });
+            });
+          }
+        });
+      </script>
+      
+</body>
+</html>
